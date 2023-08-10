@@ -1,16 +1,13 @@
-import { UserCard } from "./sections/users/UserCard";
-import { useUsers } from "./sections/users/useUsers";
+import { FilmCard } from "./sections/films/FilmCard";
+import { useFilms } from "./sections/films/useFilms";
 
 export function App() {
-	const users = useUsers();
+	const films = useFilms();
 
 	return (
 		<div className="App">
-			<h3>🌱⚛️ Create React App Codely template example</h3>
-			<h2>Current users</h2>
-
-			{users.map((user) => (
-				<UserCard key={user.name} user={user} />
+			{films.map((film) => (
+				<FilmCard key={film.id} film={film} />
 			))}
 		</div>
 	);
